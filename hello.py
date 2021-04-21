@@ -14,6 +14,7 @@ else:
     flog.write ('hello john')
 flog.write("Passed")
 try:
+    
     b=1/0
 except ZeroDivisionError as e:
     #print('error occured')

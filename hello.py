@@ -1,19 +1,20 @@
 import os
-import logging
+import datetime
 os.system('clear')
+now = datetime.datetime.now()
+timestamp = str(now.strftime("%Y%m%d_%H-%M-%S"))
+flog = open("run_logs/status.log."+timestamp,"a")
+ferror = open("error_logs/error.log"+timestamp,"a")
 a=3
 if a == 1:
-    print('hello john and ciciliya')
+    flog.write('hello john and ciciliya')
 elif a == 2:
-    print('hello ciciliya')
+    flog.write('hello ciciliya')
 else:
-    print ('hello john')
-
+    flog.write ('hello john')
+flog.write("Passed")
 try:
     b=1/0
 except ZeroDivisionError as e:
-    os.system('echo first:'+str(e)+'>error.log')
     #print('error occured')
-    logging.exception("Error occured while printing GeeksforGeeks") 
-    f = open("error.log","a")
-    f.write("second:Error occured while printing GeeksforGeeks")
+    ferror.write(str(e))

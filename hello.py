@@ -11,6 +11,7 @@ if a == 1:
 elif a == 2:
     flog.write('hello ciciliya')
 else:
+    
     flog.write ('hello john')
 flog.write("Passed")
 try:

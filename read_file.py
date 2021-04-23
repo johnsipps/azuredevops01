@@ -1,9 +1,12 @@
 from azure.storage.blob import BlockBlobService
 import pandas as pd
 import tables
+import os
+import datetime
+os.system('clear')
 
 STORAGEACCOUNTNAME= jdlstoregen2
-STORAGEACCOUNTKEY= 'G9G3BNiX10/vjfDJy9PeJUpCRz5kAdA8gJKE5kJq72+quE7cP4fbDduHNjrh4i8rxK+siHDarQyUYyn9X8f0Uw=='
+STORAGEACCOUNTKEY= 'yG9G3BNiX10/vjfDJy9PeJUpCRz5kAdA8gJKE5kJq72+quE7cP4fbDduHNjrh4i8rxK+siHDarQyUYyn9X8f0Uw=='
 LOCALFILENAME= NYCTripSmall.parquet
 CONTAINERNAME= input
 BLOBNAME= NYCTripSmall.parquet
